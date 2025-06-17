@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="lh_robothand_a0" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0005326423495375 0.0772717786864033 -0.000898966132266925"
+        rpy="0 0 0" />
+      <mass
+        value="0.262848373649471" />
+      <inertia
+        ixx="0.000130459702267955"
+        ixy="4.38658283159813E-06"
+        ixz="-6.62905537360346E-07"
+        iyy="9.65532912794237E-05"
+        iyz="2.75033765803907E-06"
+        izz="0.000185448616754051" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LF1_Link">
+    <inertial>
+      <origin
+        xyz="-0.000755891931996811 0.0242568044237363 0.00149883945650025"
+        rpy="0 0 0" />
+      <mass
+        value="0.0074874409052179" />
+      <inertia
+        ixx="1.35659212400427E-06"
+        ixy="-4.65212839765399E-10"
+        ixz="7.38171085887314E-11"
+        iyy="1.60505163680432E-07"
+        iyz="-1.16129213018786E-08"
+        izz="1.26083289748393E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/LF1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/LF1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF1"
+    type="revolute">
+    <origin
+      xyz="0.02722 0.12067 -0.0012197"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LF1_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="LF2"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="LF2_Link">
+    <inertial>
+      <origin
+        xyz="-0.000844515150359219 0.0117739441187939 0.0022679198803186"
+        rpy="0 0 0" />
+      <mass
+        value="0.0020406717952195" />
+      <inertia
+        ixx="1.17780368975088E-07"
+        ixy="-1.62568514619483E-10"
+        ixz="-6.56414673959214E-12"
+        iyy="5.24770124374262E-08"
+        iyz="-1.50021567083424E-09"
+        izz="1.21248902970585E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/LF2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/LF2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF2"
+    type="revolute">
+    <origin
+      xyz="0 0.040097 -0.00037218"
+      rpy="0 0 0" />
+    <parent
+      link="LF1_Link" />
+    <child
+      link="LF2_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="LF3"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="LF3_Link">
+    <inertial>
+      <origin
+        xyz="-0.000895410151615577 0.0102874431755886 0.00155427545488495"
+        rpy="0 0 0" />
+      <mass
+        value="0.0024374814930342" />
+      <inertia
+        ixx="7.38921004801917E-08"
+        ixy="1.49725783063222E-10"
+        ixz="-4.15130471258454E-11"
+        iyy="4.10621116300406E-08"
+        iyz="1.55102171166972E-08"
+        izz="7.50783856519446E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/LF3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/LF3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF3"
+    type="revolute">
+    <origin
+      xyz="0 0.02198 0.00094344"
+      rpy="0 0 0" />
+    <parent
+      link="LF2_Link" />
+    <child
+      link="LF3_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="RF1_Link">
+    <inertial>
+      <origin
+        xyz="-0.00104069618489598 0.0261110997390666 0.00194999113122413"
+        rpy="0 0 0" />
+      <mass
+        value="0.0083300368382922" />
+      <inertia
+        ixx="1.86735417982367E-06"
+        ixy="-8.99284385104697E-10"
+        ixz="8.91971575249666E-11"
+        iyy="1.62745378640412E-07"
+        iyz="-1.94691117945355E-08"
+        izz="1.77324944931858E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/RF1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/RF1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF1"
+    type="revolute">
+    <origin
+      xyz="0.0090199 0.12467 -0.0032197"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RF1_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="RF2"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="RF2_Link">
+    <inertial>
+      <origin
+        xyz="-0.00119704829718612 0.0126321497239338 0.00261158687244465"
+        rpy="0 0 0" />
+      <mass
+        value="0.00216268864685091" />
+      <inertia
+        ixx="1.41711926150424E-07"
+        ixy="-1.51182028249349E-10"
+        ixz="1.16937908138144E-11"
+        iyy="5.52598873102467E-08"
+        iyz="-1.51138258504334E-09"
+        izz="1.46910093656898E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/RF2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/RF2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF2"
+    type="revolute">
+    <origin
+      xyz="0.0002 0.0445 0.00020578"
+      rpy="0 0 0" />
+    <parent
+      link="RF1_Link" />
+    <child
+      link="RF2_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="RF3"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="RF3_Link">
+    <inertial>
+      <origin
+        xyz="-0.00119370596150321 0.0122054724231012 0.00355817968514922"
+        rpy="0 0 0" />
+      <mass
+        value="0.00336561552955153" />
+      <inertia
+        ixx="1.25559248030388E-07"
+        ixy="5.22357622270556E-11"
+        ixz="-2.92570308975789E-11"
+        iyy="6.16777154701083E-08"
+        iyz="1.74296137561546E-08"
+        izz="1.34405881345937E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/RF3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/RF3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF3"
+    type="revolute">
+    <origin
+      xyz="0 0.024497 0.00039909"
+      rpy="0 0 0" />
+    <parent
+      link="RF2_Link" />
+    <child
+      link="RF3_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="MF1_Link">
+    <inertial>
+      <origin
+        xyz="-0.00103409605479259 0.0276393847117343 0.00252652933854141"
+        rpy="0 0 0" />
+      <mass
+        value="0.0097069421206806" />
+      <inertia
+        ixx="2.35328907941077E-06"
+        ixy="-1.1153108835082E-09"
+        ixz="-5.24844132673409E-11"
+        iyy="2.03043476464388E-07"
+        iyz="-6.87987313977919E-08"
+        izz="2.23086466393879E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/MF1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/MF1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="MF1"
+    type="revolute">
+    <origin
+      xyz="-0.0094801 0.12667 -0.0047197"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="MF1_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="MF2"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="MF2_Link">
+    <inertial>
+      <origin
+        xyz="-0.00103269636547934 0.013490144319442 0.0028976553081372"
+        rpy="0 0 0" />
+      <mass
+        value="0.00228824509732534" />
+      <inertia
+        ixx="1.7050913980067E-07"
+        ixy="-1.56264344067894E-10"
+        ixz="-2.22921136326968E-11"
+        iyy="5.95577145416408E-08"
+        iyz="-4.42554833000743E-09"
+        izz="1.78155599264701E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/MF2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/MF2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="MF2"
+    type="revolute">
+    <origin
+      xyz="0 0.047487 0.0011335"
+      rpy="0 0 0" />
+    <parent
+      link="MF1_Link" />
+    <child
+      link="MF2_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="MF3"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="MF3_Link">
+    <inertial>
+      <origin
+        xyz="-0.00109373548759277 0.0122123250633884 0.0035339262295747"
+        rpy="0 0 0" />
+      <mass
+        value="0.00336556031844797" />
+      <inertia
+        ixx="1.25555487633584E-07"
+        ixy="5.24058611297316E-11"
+        ixz="-2.89495483920673E-11"
+        iyy="6.17473787558547E-08"
+        iyz="1.7573287946942E-08"
+        izz="1.34335338467939E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/MF3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/MF3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="MF3"
+    type="revolute">
+    <origin
+      xyz="0 0.026482 0.00098138"
+      rpy="0 0 0" />
+    <parent
+      link="MF2_Link" />
+    <child
+      link="MF3_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="FF1_Link">
+    <inertial>
+      <origin
+        xyz="-0.00104070068063387 0.0260984041341586 0.00208802564535935"
+        rpy="0 0 0" />
+      <mass
+        value="0.00833003074086424" />
+      <inertia
+        ixx="1.86735423879991E-06"
+        ixy="-8.99750519087512E-10"
+        ixz="8.43248988996383E-11"
+        iyy="1.63055145455469E-07"
+        iyz="-2.8096330181437E-08"
+        izz="1.77293980832037E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/FF1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/FF1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FF1"
+    type="revolute">
+    <origin
+      xyz="-0.02808 0.12467 -0.0032197"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FF1_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="FF2"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="FF2_Link">
+    <inertial>
+      <origin
+        xyz="-0.00119704889849115 0.0126024560602183 0.0027410938324317"
+        rpy="0 0 0" />
+      <mass
+        value="0.00216268861976196" />
+      <inertia
+        ixx="1.41711912861347E-07"
+        ixy="-1.51284528273074E-10"
+        ixz="1.01075984664546E-11"
+        iyy="5.53138478506454E-08"
+        iyz="-2.47277102938112E-09"
+        izz="1.46856120478191E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/FF2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/FF2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FF2"
+    type="revolute">
+    <origin
+      xyz="0.0002 0.044498 0.00044206"
+      rpy="0 0 0" />
+    <parent
+      link="FF1_Link" />
+    <child
+      link="FF2_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="FF3"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="FF3_Link">
+    <inertial>
+      <origin
+        xyz="-0.00119677791994263 0.0121617673254443 0.00370928642272381"
+        rpy="0 0 0" />
+      <mass
+        value="0.00337032712997865" />
+      <inertia
+        ixx="1.25145238174883E-07"
+        ixy="4.33600409634468E-11"
+        ixz="-5.31106934522797E-11"
+        iyy="6.15688525220647E-08"
+        iyz="1.6346381812885E-08"
+        izz="1.35642578425083E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/FF3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/FF3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FF3"
+    type="revolute">
+    <origin
+      xyz="0 0.024491 0.00065357"
+      rpy="0 0 0" />
+    <parent
+      link="FF2_Link" />
+    <child
+      link="FF3_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="TH1_Link">
+    <inertial>
+      <origin
+        xyz="0.0126010834927772 0.0270415002472552 0.0157351570711252"
+        rpy="0 0 0" />
+      <mass
+        value="0.0376965566076027" />
+      <inertia
+        ixx="2.99126716126074E-06"
+        ixy="-6.52954680161949E-07"
+        ixz="-4.43418989487351E-07"
+        iyy="3.70766297941824E-06"
+        iyz="-1.05012625203573E-06"
+        izz="4.80087959123137E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/TH1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/TH1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="TH1"
+    type="revolute">
+    <origin
+      xyz="-0.024843 0.061673 0.0085578"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="TH1_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="1"
+      effort="1"
+      velocity="0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="TH2"
+      multiplier="-1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="TH2_Link">
+    <inertial>
+      <origin
+        xyz="-0.000751465383598712 0.0187130036119364 0.0118895562526252"
+        rpy="0 0 0" />
+      <mass
+        value="0.00973663443524222" />
+      <inertia
+        ixx="1.44806919545669E-06"
+        ixy="1.00623347985229E-09"
+        ixz="1.07227762503879E-09"
+        iyy="5.8335186003981E-07"
+        iyz="-4.98758878518182E-07"
+        izz="9.58749675239436E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/TH2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/TH2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="TH2"
+    type="revolute">
+    <origin
+      xyz="0.029023 0.041949 0.02497"
+      rpy="0 -1.0472 -1.5708" />
+    <parent
+      link="TH1_Link" />
+    <child
+      link="TH2_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.65"
+      upper="0"
+      effort="1"
+      velocity="-0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+    <mimic
+      joint="TH3"
+      multiplier="1.8"
+      offset="0" />
+  </joint>
+  <link
+    name="TH3_Link">
+    <inertial>
+      <origin
+        xyz="-0.00084857 0.011553 0.005952"
+        rpy="0 0 0" />
+      <mass
+        value="0.0049133" />
+      <inertia
+        ixx="2.112E-07"
+        ixy="1.7884E-10"
+        ixz="1.4276E-10"
+        iyy="1.9961E-07"
+        iyz="-4.4924E-08"
+        izz="1.6068E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/TH3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lh_robothand_a0_description/meshes/TH3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="TH3"
+    type="revolute">
+    <origin
+      xyz="0 0.030805 0.02225"
+      rpy="0 0 0" />
+    <parent
+      link="TH2_Link" />
+    <child
+      link="TH3_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.79"
+      upper="0"
+      effort="1"
+      velocity="0.5" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+</robot>
