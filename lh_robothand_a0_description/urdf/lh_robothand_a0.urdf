@@ -5,7 +5,7 @@
 <robot
   name="lh_robothand_a0">
   <link
-    name="base_link">
+    name="lh_base_link">
     <inertial>
       <origin
         xyz="-0.0005326423495375 0.0772717786864033 -0.000898966132266925"
@@ -45,7 +45,7 @@
     </collision>
   </link>
   <link
-    name="LF1_Link">
+    name="lh_LF1_Link">
     <inertial>
       <origin
         xyz="-0.000755891931996811 0.0242568044237363 0.00149883945650025"
@@ -85,15 +85,15 @@
     </collision>
   </link>
   <joint
-    name="LF1"
+    name="lh_LF1"
     type="revolute">
     <origin
       xyz="0.02722 0.12067 -0.0012197"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="lh_base_link" />
     <child
-      link="LF1_Link" />
+      link="lh_LF1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -105,12 +105,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="LF2"
+      joint="lh_LF2"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="LF2_Link">
+    name="lh_LF2_Link">
     <inertial>
       <origin
         xyz="-0.000844515150359219 0.0117739441187939 0.0022679198803186"
@@ -150,15 +150,15 @@
     </collision>
   </link>
   <joint
-    name="LF2"
+    name="lh_LF2"
     type="revolute">
     <origin
       xyz="0 0.040097 -0.00037218"
       rpy="0 0 0" />
     <parent
-      link="LF1_Link" />
+      link="lh_LF1_Link" />
     <child
-      link="LF2_Link" />
+      link="lh_LF2_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -170,12 +170,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="LF3"
+      joint="lh_LF3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="LF3_Link">
+    name="lh_LF3_Link">
     <inertial>
       <origin
         xyz="-0.000895410151615577 0.0102874431755886 0.00155427545488495"
@@ -215,15 +215,15 @@
     </collision>
   </link>
   <joint
-    name="LF3"
+    name="lh_LF3"
     type="revolute">
     <origin
       xyz="0 0.02198 0.00094344"
       rpy="0 0 0" />
     <parent
-      link="LF2_Link" />
+      link="lh_LF2_Link" />
     <child
-      link="LF3_Link" />
+      link="lh_LF3_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -236,7 +236,7 @@
       friction="0.1" />
   </joint>
   <link
-    name="RF1_Link">
+    name="lh_RF1_Link">
     <inertial>
       <origin
         xyz="-0.00104069618489598 0.0261110997390666 0.00194999113122413"
@@ -276,15 +276,15 @@
     </collision>
   </link>
   <joint
-    name="RF1"
+    name="lh_RF1"
     type="revolute">
     <origin
       xyz="0.0090199 0.12467 -0.0032197"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="lh_base_link" />
     <child
-      link="RF1_Link" />
+      link="lh_RF1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -296,12 +296,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="RF2"
+      joint="lh_RF2"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="RF2_Link">
+    name="lh_RF2_Link">
     <inertial>
       <origin
         xyz="-0.00119704829718612 0.0126321497239338 0.00261158687244465"
@@ -341,15 +341,15 @@
     </collision>
   </link>
   <joint
-    name="RF2"
+    name="lh_RF2"
     type="revolute">
     <origin
       xyz="0.0002 0.0445 0.00020578"
       rpy="0 0 0" />
     <parent
-      link="RF1_Link" />
+      link="lh_RF1_Link" />
     <child
-      link="RF2_Link" />
+      link="lh_RF2_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -361,12 +361,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="RF3"
+      joint="lh_RF3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="RF3_Link">
+    name="lh_RF3_Link">
     <inertial>
       <origin
         xyz="-0.00119370596150321 0.0122054724231012 0.00355817968514922"
@@ -406,15 +406,15 @@
     </collision>
   </link>
   <joint
-    name="RF3"
+    name="lh_RF3"
     type="revolute">
     <origin
       xyz="0 0.024497 0.00039909"
       rpy="0 0 0" />
     <parent
-      link="RF2_Link" />
+      link="lh_RF2_Link" />
     <child
-      link="RF3_Link" />
+      link="lh_RF3_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -427,7 +427,7 @@
       friction="0.1" />
   </joint>
   <link
-    name="MF1_Link">
+    name="lh_MF1_Link">
     <inertial>
       <origin
         xyz="-0.00103409605479259 0.0276393847117343 0.00252652933854141"
@@ -467,15 +467,15 @@
     </collision>
   </link>
   <joint
-    name="MF1"
+    name="lh_MF1"
     type="revolute">
     <origin
       xyz="-0.0094801 0.12667 -0.0047197"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="lh_base_link" />
     <child
-      link="MF1_Link" />
+      link="lh_MF1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -487,12 +487,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="MF2"
+      joint="lh_MF2"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="MF2_Link">
+    name="lh_MF2_Link">
     <inertial>
       <origin
         xyz="-0.00103269636547934 0.013490144319442 0.0028976553081372"
@@ -532,15 +532,15 @@
     </collision>
   </link>
   <joint
-    name="MF2"
+    name="lh_MF2"
     type="revolute">
     <origin
       xyz="0 0.047487 0.0011335"
       rpy="0 0 0" />
     <parent
-      link="MF1_Link" />
+      link="lh_MF1_Link" />
     <child
-      link="MF2_Link" />
+      link="lh_MF2_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -552,12 +552,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="MF3"
+      joint="lh_MF3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="MF3_Link">
+    name="lh_MF3_Link">
     <inertial>
       <origin
         xyz="-0.00109373548759277 0.0122123250633884 0.0035339262295747"
@@ -597,15 +597,15 @@
     </collision>
   </link>
   <joint
-    name="MF3"
+    name="lh_MF3"
     type="revolute">
     <origin
       xyz="0 0.026482 0.00098138"
       rpy="0 0 0" />
     <parent
-      link="MF2_Link" />
+      link="lh_MF2_Link" />
     <child
-      link="MF3_Link" />
+      link="lh_MF3_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -618,7 +618,7 @@
       friction="0.1" />
   </joint>
   <link
-    name="FF1_Link">
+    name="lh_FF1_Link">
     <inertial>
       <origin
         xyz="-0.00104070068063387 0.0260984041341586 0.00208802564535935"
@@ -658,15 +658,15 @@
     </collision>
   </link>
   <joint
-    name="FF1"
+    name="lh_FF1"
     type="revolute">
     <origin
       xyz="-0.02808 0.12467 -0.0032197"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="lh_base_link" />
     <child
-      link="FF1_Link" />
+      link="lh_FF1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -678,12 +678,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="FF2"
+      joint="lh_FF2"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="FF2_Link">
+    name="lh_FF2_Link">
     <inertial>
       <origin
         xyz="-0.00119704889849115 0.0126024560602183 0.0027410938324317"
@@ -723,15 +723,15 @@
     </collision>
   </link>
   <joint
-    name="FF2"
+    name="lh_FF2"
     type="revolute">
     <origin
       xyz="0.0002 0.044498 0.00044206"
       rpy="0 0 0" />
     <parent
-      link="FF1_Link" />
+      link="lh_FF1_Link" />
     <child
-      link="FF2_Link" />
+      link="lh_FF2_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -743,12 +743,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="FF3"
+      joint="lh_FF3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="FF3_Link">
+    name="lh_FF3_Link">
     <inertial>
       <origin
         xyz="-0.00119677791994263 0.0121617673254443 0.00370928642272381"
@@ -788,15 +788,15 @@
     </collision>
   </link>
   <joint
-    name="FF3"
+    name="lh_FF3"
     type="revolute">
     <origin
       xyz="0 0.024491 0.00065357"
       rpy="0 0 0" />
     <parent
-      link="FF2_Link" />
+      link="lh_FF2_Link" />
     <child
-      link="FF3_Link" />
+      link="lh_FF3_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -809,7 +809,7 @@
       friction="0.1" />
   </joint>
   <link
-    name="TH1_Link">
+    name="lh_TH1_Link">
     <inertial>
       <origin
         xyz="0.0126010834927772 0.0270415002472552 0.0157351570711252"
@@ -849,15 +849,15 @@
     </collision>
   </link>
   <joint
-    name="TH1"
+    name="lh_TH1"
     type="revolute">
     <origin
       xyz="-0.024843 0.061673 0.0085578"
       rpy="0 0 1.5708" />
     <parent
-      link="base_link" />
+      link="lh_base_link" />
     <child
-      link="TH1_Link" />
+      link="lh_TH1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -869,12 +869,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="TH2"
+      joint="lh_TH2"
       multiplier="-1.8"
       offset="0" />
   </joint>
   <link
-    name="TH2_Link">
+    name="lh_TH2_Link">
     <inertial>
       <origin
         xyz="-0.000751465383598712 0.0187130036119364 0.0118895562526252"
@@ -914,15 +914,15 @@
     </collision>
   </link>
   <joint
-    name="TH2"
+    name="lh_TH2"
     type="revolute">
     <origin
       xyz="0.029023 0.041949 0.02497"
       rpy="0 -1.0472 -1.5708" />
     <parent
-      link="TH1_Link" />
+      link="lh_TH1_Link" />
     <child
-      link="TH2_Link" />
+      link="lh_TH2_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -934,12 +934,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="TH3"
+      joint="lh_TH3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="TH3_Link">
+    name="lh_TH3_Link">
     <inertial>
       <origin
         xyz="-0.00084857 0.011553 0.005952"
@@ -979,15 +979,15 @@
     </collision>
   </link>
   <joint
-    name="TH3"
+    name="lh_TH3"
     type="revolute">
     <origin
       xyz="0 0.030805 0.02225"
       rpy="0 0 0" />
     <parent
-      link="TH2_Link" />
+      link="lh_TH2_Link" />
     <child
-      link="TH3_Link" />
+      link="lh_TH3_Link" />
     <axis
       xyz="1 0 0" />
     <limit

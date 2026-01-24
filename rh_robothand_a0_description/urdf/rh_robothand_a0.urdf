@@ -5,7 +5,7 @@
 <robot
   name="rh_robothand_a0">
   <link
-    name="base_link">
+    name="rh_base_link">
     <inertial>
       <origin
         xyz="-0.0771315633048101 0.000550496064865218 -0.000878012041051911"
@@ -31,7 +31,7 @@
       <material
         name="">
         <color
-          rgba="0 0.501960784313725 0 1" />
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
@@ -45,7 +45,7 @@
     </collision>
   </link>
   <link
-    name="LF1_Link">
+    name="rh_LF1_Link">
     <inertial>
       <origin
         xyz="0.00111100024125576 -0.0243220192544273 -0.00176169275516479"
@@ -85,15 +85,15 @@
     </collision>
   </link>
   <joint
-    name="LF1"
+    name="rh_LF1"
     type="revolute">
     <origin
       xyz="-0.120667710792653 -0.0276205870569372 -0.0012196779370232"
       rpy="-3.14159265358979 0 1.5707963267949" />
     <parent
-      link="base_link" />
+      link="rh_base_link" />
     <child
-      link="LF1_Link" />
+      link="rh_LF1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -105,12 +105,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="LF2"
+      joint="rh_LF2"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="LF2_Link">
+    name="rh_LF2_Link">
     <inertial>
       <origin
         xyz="-0.00104817337540824 -0.0116661936288779 0.00269074989953632"
@@ -150,15 +150,15 @@
     </collision>
   </link>
   <joint
-    name="LF2"
+    name="rh_LF2"
     type="revolute">
     <origin
       xyz="0 -0.0400984606909391 -0.000233749430079859"
       rpy="3.14159265358979 0 3.14159265358979" />
     <parent
-      link="LF1_Link" />
+      link="rh_LF1_Link" />
     <child
-      link="LF2_Link" />
+      link="rh_LF2_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -170,12 +170,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="LF3"
+      joint="rh_LF3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="LF3_Link">
+    name="rh_LF3_Link">
     <inertial>
       <origin
         xyz="-0.00105495450411704 -0.0102181768353214 0.00195647033954117"
@@ -215,15 +215,15 @@
     </collision>
   </link>
   <joint
-    name="LF3"
+    name="rh_LF3"
     type="revolute">
     <origin
       xyz="4.99999999999043E-05 -0.0219426636355103 0.00158729725598191"
       rpy="0 0 0" />
     <parent
-      link="LF2_Link" />
+      link="rh_LF2_Link" />
     <child
-      link="LF3_Link" />
+      link="rh_LF3_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -236,7 +236,7 @@
       friction="0.1" />
   </joint>
   <link
-    name="RF1_Link">
+    name="rh_RF1_Link">
     <inertial>
       <origin
         xyz="0.000820796423871568 -0.0262118595257119 -0.00188459504333765"
@@ -276,15 +276,15 @@
     </collision>
   </link>
   <joint
-    name="RF1"
+    name="rh_RF1"
     type="revolute">
     <origin
       xyz="-0.124667710792653 -0.00861989487209627 -0.00321967793702238"
       rpy="-3.14159265358979 0 1.5707963267949" />
     <parent
-      link="base_link" />
+      link="rh_base_link" />
     <child
-      link="RF1_Link" />
+      link="rh_RF1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -296,12 +296,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="RF2"
+      joint="rh_RF2"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="RF2_Link">
+    name="rh_RF2_Link">
     <inertial>
       <origin
         xyz="-0.000902951596117497 -0.0126280881225271 0.00262967210406026"
@@ -341,15 +341,15 @@
     </collision>
   </link>
   <joint
-    name="RF2"
+    name="rh_RF2"
     type="revolute">
     <origin
       xyz="0 -0.0444999999936167 -0.000238749430078784"
       rpy="3.14159265358979 0 3.14159265358979" />
     <parent
-      link="RF1_Link" />
+      link="rh_RF1_Link" />
     <child
-      link="RF2_Link" />
+      link="rh_RF2_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -361,12 +361,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="RF3"
+      joint="rh_RF3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="RF3_Link">
+    name="rh_RF3_Link">
     <inertial>
       <origin
         xyz="-0.000703365419428665 -0.0122037109807715 0.00356867915555399"
@@ -406,15 +406,15 @@
     </collision>
   </link>
   <joint
-    name="RF3"
+    name="rh_RF3"
     type="revolute">
     <origin
       xyz="-0.000200000000000051 -0.024496145135367 0.000434595797305881"
       rpy="0 0 0" />
     <parent
-      link="RF2_Link" />
+      link="rh_RF2_Link" />
     <child
-      link="RF3_Link" />
+      link="rh_RF3_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -427,7 +427,7 @@
       friction="0.1" />
   </joint>
   <link
-    name="MF1_Link">
+    name="rh_MF1_Link">
     <inertial>
       <origin
         xyz="0.00102636353024867 -0.0277555297254293 -0.00193930885655732"
@@ -467,15 +467,15 @@
     </collision>
   </link>
   <joint
-    name="MF1"
+    name="rh_MF1"
     type="revolute">
     <origin
       xyz="-0.126667710792653 0.00957941294306249 -0.00471967793702235"
       rpy="3.14159265358979 0 1.5707963267949" />
     <parent
-      link="base_link" />
+      link="rh_base_link" />
     <child
-      link="MF1_Link" />
+      link="rh_MF1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -487,12 +487,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="MF2"
+      joint="rh_MF2"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="MF2_Link">
+    name="rh_MF2_Link">
     <inertial>
       <origin
         xyz="-0.00104307276229463 -0.0135838572124982 0.00246216330949421"
@@ -532,15 +532,15 @@
     </collision>
   </link>
   <joint
-    name="MF2"
+    name="rh_MF2"
     type="revolute">
     <origin
       xyz="0 -0.0474999999936168 -0.000238749430078922"
       rpy="3.14159265358979 0 -3.14159265358979" />
     <parent
-      link="MF1_Link" />
+      link="rh_MF1_Link" />
     <child
-      link="MF2_Link" />
+      link="rh_MF2_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -552,12 +552,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="MF3"
+      joint="rh_MF3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="MF3_Link">
+    name="rh_MF3_Link">
     <inertial>
       <origin
         xyz="-0.00100636785975747 -0.0123647736791516 0.00295571439606786"
@@ -597,15 +597,15 @@
     </collision>
   </link>
   <joint
-    name="MF3"
+    name="rh_MF3"
     type="revolute">
     <origin
       xyz="0 -0.0264999981219051 0"
       rpy="0 0 0" />
     <parent
-      link="MF2_Link" />
+      link="rh_MF2_Link" />
     <child
-      link="MF3_Link" />
+      link="rh_MF3_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -618,7 +618,7 @@
       friction="0.1" />
   </joint>
   <link
-    name="FF1_Link">
+    name="rh_FF1_Link">
     <inertial>
       <origin
         xyz="0.000820796423869424 -0.0262118595257167 -0.00188459504333683"
@@ -658,15 +658,15 @@
     </collision>
   </link>
   <joint
-    name="FF1"
+    name="rh_FF1"
     type="revolute">
     <origin
       xyz="-0.124667710792653 0.0283801051279036 -0.00321967793702234"
       rpy="3.14159265358979 0 1.57079632679489" />
     <parent
-      link="base_link" />
+      link="rh_base_link" />
     <child
-      link="FF1_Link" />
+      link="rh_FF1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -678,12 +678,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="FF2"
+      joint="rh_FF2"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="FF2_Link">
+    name="rh_FF2_Link">
     <inertial>
       <origin
         xyz="-0.000876427685851701 -0.0126280888421312 0.00262967239679973"
@@ -723,15 +723,15 @@
     </collision>
   </link>
   <joint
-    name="FF2"
+    name="rh_FF2"
     type="revolute">
     <origin
       xyz="0 -0.0444999999936168 -0.000238749430078741"
       rpy="3.14159265358979 0 3.14159265358979" />
     <parent
-      link="FF1_Link" />
+      link="rh_FF1_Link" />
     <child
-      link="FF2_Link" />
+      link="rh_FF2_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -743,12 +743,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="FF3"
+      joint="rh_FF3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="FF3_Link">
+    name="rh_FF3_Link">
     <inertial>
       <origin
         xyz="-0.000903358498992264 -0.0122037900802425 0.00356868608685759"
@@ -788,15 +788,15 @@
     </collision>
   </link>
   <joint
-    name="FF3"
+    name="rh_FF3"
     type="revolute">
     <origin
       xyz="0 -0.024496145135367 0.000434595797305956"
       rpy="0 0 0" />
     <parent
-      link="FF2_Link" />
+      link="rh_FF2_Link" />
     <child
-      link="FF3_Link" />
+      link="rh_FF3_Link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -809,7 +809,7 @@
       friction="0.1" />
   </joint>
   <link
-    name="TH1_Link">
+    name="rh_TH1_Link">
     <inertial>
       <origin
         xyz="0.0152495536804474 -0.0275974123133982 0.0158461495422274"
@@ -849,15 +849,15 @@
     </collision>
   </link>
   <joint
-    name="TH1"
+    name="rh_TH1"
     type="revolute">
     <origin
       xyz="-0.0584729772678924 0.0248430195360303 0.00855783635789703"
       rpy="0 0 -3.14159265358979" />
     <parent
-      link="base_link" />
+      link="rh_base_link" />
     <child
-      link="TH1_Link" />
+      link="rh_TH1_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -869,12 +869,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="TH2"
+      joint="rh_TH2"
       multiplier="-1.8"
       offset="0" />
   </joint>
   <link
-    name="TH2_Link">
+    name="rh_TH2_Link">
     <inertial>
       <origin
         xyz="0.000874971077754211 -0.0187539364666164 0.0120035911957873"
@@ -914,15 +914,15 @@
     </collision>
   </link>
   <joint
-    name="TH2"
+    name="rh_TH2"
     type="revolute">
     <origin
       xyz="0.031184 -0.043702 0.024365"
       rpy="0 -1.0472 1.5708" />
     <parent
-      link="TH1_Link" />
+      link="rh_TH1_Link" />
     <child
-      link="TH2_Link" />
+      link="rh_TH2_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -934,12 +934,12 @@
       damping="0.1"
       friction="0.1" />
     <mimic
-      joint="TH3"
+      joint="rh_TH3"
       multiplier="1.8"
       offset="0" />
   </joint>
   <link
-    name="TH3_Link">
+    name="rh_TH3_Link">
     <inertial>
       <origin
         xyz="0.00085014160457153 -0.0115532101130959 0.00595133181255027"
@@ -979,15 +979,15 @@
     </collision>
   </link>
   <joint
-    name="TH3"
+    name="rh_TH3"
     type="revolute">
     <origin
       xyz="0 -0.0308049280341684 0.0222498631188981"
       rpy="0 0 0" />
     <parent
-      link="TH2_Link" />
+      link="rh_TH2_Link" />
     <child
-      link="TH3_Link" />
+      link="rh_TH3_Link" />
     <axis
       xyz="-1 0 0" />
     <limit
