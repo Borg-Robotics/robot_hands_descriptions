@@ -36,11 +36,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.11 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://rh_robothand_a0_description/meshes/base_link.STL" />
+        <box size="0.22 0.08 0.05"/>
       </geometry>
     </collision>
   </link>
@@ -74,7 +73,7 @@
           rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -82,7 +81,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/LF1_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_LF1"
@@ -139,7 +138,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -147,7 +146,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/LF2_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_LF2"
@@ -204,7 +203,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -212,7 +211,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/LF3_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_LF3"
@@ -265,7 +264,7 @@
           rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -273,7 +272,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/RF1_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_RF1"
@@ -330,7 +329,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -338,7 +337,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/RF2_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_RF2"
@@ -395,7 +394,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -403,7 +402,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/RF3_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_RF3"
@@ -456,7 +455,7 @@
           rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -464,7 +463,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/MF1_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_MF1"
@@ -521,7 +520,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -529,7 +528,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/MF2_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_MF2"
@@ -586,7 +585,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -594,7 +593,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/MF3_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_MF3"
@@ -647,7 +646,7 @@
           rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -655,7 +654,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/FF1_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_FF1"
@@ -712,7 +711,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -720,7 +719,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/FF2_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_FF2"
@@ -777,7 +776,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -785,7 +784,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/FF3_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_FF3"
@@ -838,7 +837,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -846,7 +845,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/TH1_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_TH1"
@@ -903,7 +902,7 @@
           rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -911,7 +910,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/TH2_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_TH2"
@@ -968,7 +967,7 @@
           rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -976,7 +975,7 @@
         <mesh
           filename="package://rh_robothand_a0_description/meshes/TH3_Link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="rh_TH3"
